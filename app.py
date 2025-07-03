@@ -43,8 +43,11 @@ if gemini_api_key is None:
     sys.exit(1)
 
 # Gemini APIの設定
-genai.configure(api_key=gemini_api_key)
-model = genai.GenerativeModel('gemini-pro')
+genai.configure(
+    api_key=gemini_api_key,
+    client_options={"api_endpoint": "generativelanguage.googleapis.com"}
+)
+model = genai.GenerativeModel('gemini-pro-vision') # モデル名を変更
 
 handler = WebhookHandler(channel_secret)
 
