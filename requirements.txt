@@ -1,4 +1,4 @@
 flask
 line-bot-sdk
 gunicorn
-google-generativeai
+google-genai==1.24.0
