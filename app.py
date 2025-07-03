@@ -1,4 +1,3 @@
-
 from flask import Flask, request, abort
 
 from linebot.v3 import (
@@ -47,7 +46,7 @@ genai.configure(
     api_key=gemini_api_key,
     client_options={"api_endpoint": "generativelanguage.googleapis.com"}
 )
-model = genai.GenerativeModel('gemini-pro-vision') # モデル名を変更
+model = genai.GenerativeModel('gemini-1.5-flash') # モデル名をgemini-1.5-flashに変更
 
 handler = WebhookHandler(channel_secret)
 
