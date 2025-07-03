@@ -44,8 +44,7 @@ if gemini_api_key is None:
 
 # Gemini APIの設定
 genai.configure(
-    api_key=gemini_api_key,
-    client_options={"api_endpoint": "generativelanguage.googleapis.com"}
+    api_key=gemini_api_key
 )
 model = genai.GenerativeModel('gemini-1.5-pro') # モデル名をgemini-1.5-proに変更
 
